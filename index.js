@@ -1,13 +1,15 @@
 const puppeteer = require('puppeteer')
 const pti = require('puppeteer-to-istanbul')
 
+const TARGET = 'http://www.photocreate.co.jp/company/overview/'
+
 async function main() {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
   await page.coverage.startCSSCoverage({ resetOnNavigation: false })
   // await page.coverage.startJSCoverage()
-  await page.goto('http://www.photocreate.co.jp/company/overview/')
+  await page.goto(TARGET)
 
   const cssCoverage = await page.coverage.stopCSSCoverage()
   // const jsCoverage = await page.coverage.stopJSCoverage()
