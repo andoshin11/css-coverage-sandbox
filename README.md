@@ -9,3 +9,5 @@ https://speakerdeck.com/pirosikick/puppeteerdeiranaicsswoxiao-su
 2. `$ yarn run test` to run puppeteer to correct css coverage.
 3. `$ yarn run report` to convert report result into HTML file. It will open your default browser automatically.
 
+# Screenshot
+![CSS Coverage Report](./css_coverage_report.png)
